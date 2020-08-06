@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>担当業務一覧</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<section class="all">
+    <!-- Tabメニュー -->
+    <div class="tab-menu">
+        <h2 class="title">担当業務一覧表</h2>
+        <div class="tab-menu-container">
+            <ul class="menu">
+                <li><a href="#" data-id="incharge" class="active">インチャージ</a></li>
+                <li><a href="#" data-id="credit">クレジット</a></li>
+                <li><a href="#" data-id="bus">バス</a></li>
+                <li><a href="#" data-id="hikitsugi">引き継ぎ</a></li>
+                <li><a href="#" data-id="sonota">その他</a></li>
+            </ul>
+        </div>
+
+        <div class="content-container">
+        <div class="content">
+            <ul class="content-menu active" id="incharge">
+                <li><i class="complete far fa-check-circle fa-lg"></i>　業務日誌（朝）</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　keyチェック</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　荷物チェック</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　黄紙チェック</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　帳票一覧出力</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　バッチ</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　業務日誌（夕）</li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul class="content-menu" id="credit">
+                <li><i class="complete far fa-check-circle fa-lg"></i>　バス本締め</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　クレジット本締め</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　c/inマシン締め</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　釣銭機入金</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　一覧表出力</li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul class="content-menu" id="bus">
+                <li><i class="complete far fa-check-circle fa-lg"></i>　c/outマシン締め</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　ポール設置</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　c/inマシン起動</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　14時FAX</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　バス締め（夕）</li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul class="content-menu" id="hikitsugi">
+                <li><i class="complete far fa-check-circle fa-lg"></i>　引き継ぎ</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　団体チェック</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　No-Showチェック</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　AGT報告</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　団体チェックイン</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　メール返信</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　雑多確認</li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul class="content-menu" id="sonota">
+                <li><i class="complete far fa-check-circle fa-lg"></i>　巡回（朝）</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　10時EXT</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　11時EXT</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　12時EXT</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　13時EXT</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　PMS再起動</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　ゴミ捨て</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　巡回</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　忘れ物処理</li>
+                <li><i class="complete far fa-check-circle fa-lg"></i>　クレジット中間締め</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <!-- ToDoリスト -->
+    <div class="todo-list">
+        <h2 class="title">新規追加 ToDoリスト</h2>
+        <div class="todo-header">
+            <input type="text" id="task" placeholder="新規タスクを入力する">
+            <i id="add" class="far fa-plus-square fa-2x"></i>
+        </div>
+
+        <div class="todo-container">
+            <h3 class="todo-title">未処理<span>Not Yet</span></h3>
+            <ul class="todo-list-item" id="not-yet"></ul>
+
+            <h3 class="todo-title">処理済み<span>Done</span></h3>
+            <ul class="todo-list-item" id="done"></ul>
+        </div>
+    </div>
+</section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/add.js"></script>
+</body>
+</html>
